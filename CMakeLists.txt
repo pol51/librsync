@@ -129,6 +129,11 @@ if(APPLE)
   endif()
 endif()
 
+# Windows
+if(WIN32)
+  add_definitions(-Dinline=__inline)
+endif()
+
 if (CMAKE_C_COMPILER_ID MATCHES "(Clang|Gnu|GNU)")
   # TODO: Set for MSVC and other compilers.
   # TODO: Set -Werror when the build is clean.
