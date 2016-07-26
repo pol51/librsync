@@ -131,7 +131,7 @@ endif()
 
 # Windows
 if(WIN32)
-  add_definitions(-Dinline=__inline)
+  add_definitions(-Dinline=__inline -Dsnprintf=_snprintf)
 endif()
 
 if (CMAKE_C_COMPILER_ID MATCHES "(Clang|Gnu|GNU)")
